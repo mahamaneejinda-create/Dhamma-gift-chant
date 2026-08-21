@@ -30,7 +30,7 @@ margin:54px auto 8px
 }
 .closing-logo{
 display:block;
-width:min(74vw,270px);
+width:min(74vw,250px);
 height:auto;
 margin:0 auto
 }`;
