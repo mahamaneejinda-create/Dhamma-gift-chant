@@ -77,3 +77,55 @@ m.appendChild(b);
 }
 
 });
+// Contact links — clickable icons
+const contactHeading = [...document.querySelectorAll("h2")]
+  .find(el => el.textContent.trim() === "ช่องทางติดต่อ");
+
+if (contactHeading) {
+  const oldContacts = [];
+  let el = contactHeading.nextElementSibling;
+
+  while (el && el.tagName === "P" && oldContacts.length < 5) {
+    oldContacts.push(el);
+    el = el.nextElementSibling;
+  }
+
+  const contacts = [
+    ["Facebook Page", "https://www.facebook.com/share/19FgpNXBiP/?mibextid=wwXIfr", "ⓕ"],
+    ["Facebook", "https://www.facebook.com/share/1HWDEenfR5/?mibextid=wwXIfr", "f"],
+    ["LINE", "https://line.me/ti/p/@harulada", "LINE"],
+    ["TikTok", "https://www.tiktok.com/@pol65454", "♪"],
+    ["Instagram", "https://www.instagram.com/pol_mahamaneejinda", "◎"]
+  ];
+
+  const box = document.createElement("div");
+  box.style.cssText =
+    "display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:22px 0 30px;";
+
+  contacts.forEach(([name, url, icon]) => {
+    const a = document.createElement("a");
+    a.href = url;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.setAttribute("aria-label", name);
+    a.style.cssText =
+      "display:flex;flex-direction:column;align-items:center;justify-content:center;" +
+      "min-width:92px;padding:12px 10px;border:1px solid #e7dfd3;border-radius:14px;" +
+      "text-decoration:none;color:#2d2a26;background:#fff;";
+
+    const mark = document.createElement("strong");
+    mark.textContent = icon;
+    mark.style.cssText =
+      "font-size:22px;min-height:34px;display:flex;align-items:center;";
+
+    const label = document.createElement("span");
+    label.textContent = name;
+    label.style.cssText = "font-size:13px;margin-top:4px;";
+
+    a.append(mark, label);
+    box.appendChild(a);
+  });
+
+  oldContacts.forEach(p => p.remove());
+  contactHeading.insertAdjacentElement("afterend", box);
+}
