@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mahamaneejinda-create.github.io/Dhamma-gift-chant/sitemap.xml
