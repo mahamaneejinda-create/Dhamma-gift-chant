@@ -95,7 +95,8 @@ if (contactHeading) {
     ["Facebook", "https://www.facebook.com/share/1HWDEenfR5/?mibextid=wwXIfr", "f"],
     ["LINE", "https://line.me/ti/p/@harulada", "LINE"],
     ["TikTok", "https://www.tiktok.com/@pol65454", "♪"],
-    ["Instagram", "https://www.instagram.com/pol_mahamaneejinda", "◎"]
+    ["Instagram", "https://www.instagram.com/pol_mahamaneejinda", "◎"],
+    ["YouTube", "https://youtube.com/channel/UCoDI7P64bJo3S2GVkRuz2xA?si=_lscT9YXHUss0Re0", "▶️"]
   ];
 
   const box = document.createElement("div");
