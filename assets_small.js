@@ -122,7 +122,7 @@ if (contactHeading) {
     const label = document.createElement("span");
     label.textContent = name;
     label.style.cssText = "font-size:13px;margin-top:4px;";
-
+label.insertAdjacentHTML("beforeend", '<small style="display:block;margin-top:6px;padding:3px 9px;border-radius:999px;background:#f6efe5;color:#7a5b32;font-size:10px;font-weight:600;">แตะเพื่อเปิด</small>');
     a.append(mark, label);
     box.appendChild(a);
   });
